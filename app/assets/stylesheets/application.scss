@@ -1,0 +1,16 @@
+@import "reset";
+@import "font-awesome";
+@import "bootstrap";
+
+.container-fluid {
+  margin: 0;
+}
+
+.card {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.fa-icon-color:before {
+  color: #17a2b8;
+}
