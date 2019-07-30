@@ -8,8 +8,11 @@
     <button type="button" class="btn btn-info rounded-circle p-0" style="width:2rem;height:2rem;">
       <%= fa_icon("edit") %>
     </button>
-    <button type="button" class="btn btn-info rounded-circle p-0" style="width:2rem;height:2rem;">
-      <%= fa_icon("trash") %>
-    </button>
+
+    <%= link_to "/articles/#{article.id}", method: :delete do %>
+      <button type="button" class="btn btn-info rounded-circle p-0" style="width:2rem;height:2rem;">
+        <%= fa_icon("trash") %>
+      </button>
+    <% end %>
   </div>
 </div>
