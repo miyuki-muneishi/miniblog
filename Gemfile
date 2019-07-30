@@ -57,3 +57,6 @@ gem 'bootstrap', '~> 4.3.1'
 
 # font-awesome
 gem 'font-awesome-rails'
+
+# デバッグ用
+gem 'pry-rails'
