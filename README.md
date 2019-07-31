@@ -5,6 +5,10 @@
 - ユーザーが自分のブログを削除できる。
 - ログインしていなくても、全てのブログを閲覧できる。
 
+# 画面イメージ
+
+![miniblog](https://user-images.githubusercontent.com/40832190/62202310-075ce080-b3c4-11e9-9b6f-8b53010d2ddb.png)
+
 # DB 設計
 
 ## users table
