@@ -4,8 +4,10 @@
       <div class="modal-header">
         <% if infoMessage == "delete" %>
           <p>削除してもよろしいですか？</p>
-        <% else %>
+        <% elsif infoMessage == "new" %>
           <p>新規記事を投稿します。</p>
+        <% elsif infoMessage == "edit" %>
+          <p>更新します。</p>
         <% end %>
         <button type="button" class="close" data-dismiss="modal" aria-label="閉じる">
           <span aria-hidden="true">&times;</span>
@@ -22,9 +24,9 @@
               <%= fa_icon("check") %>
             </button>
           <% end %>
-        <% elsif infoMessage == "new" %>
+        <% elsif infoMessage == "new" or infoMessage == "edit" %>
           <%= button_tag type: "submit", class: "btn bg-mainColor rounded-circle p-0 btn-round" do %>
-            <%= fa_icon("plus") %>
+              <%= fa_icon("check") %>
           <% end %>
         <% end %>
 
