@@ -21,13 +21,13 @@
         </div>
       </div>
       <div class="card-footer">
-        <button type="button" class="btn bg-mainColor rounded-circle p-0 btn-round" data-toggle="modal" data-target="#infoWindow">
+        <%= button_tag type: "button", class: "btn bg-mainColor rounded-circle p-0 btn-round", "data-toggle": "modal", "data-target": "#infoWindow" do %>
           <% if formFlg == "new" %>
             <%= fa_icon("plus") %>
           <% elsif formFlg == "edit" %>
             <%= fa_icon("check") %>
           <% end %>
-        </button>
+        <% end %>
         <%= render partial: "./layouts/infoWindow", locals: { article: @article, infoMessage: formFlg } %>
       </div>
     </div>
