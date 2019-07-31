@@ -65,3 +65,7 @@ gem 'pry-rails'
 gem 'devise'
 gem 'devise-i18n'
 gem 'devise-i18n-views'
+
+# ページネーション
+gem 'kaminari'
+gem 'kaminari-bootstrap', '~> 3.0.1'
