@@ -1,0 +1,35 @@
+<%= form_for(@article) do |f| %>
+  <div class="form-group">
+    <div class="card shadow-sm">
+      <div class="card-body">
+        <h5 class="card-title">
+          <% if formFlg == "new" %>
+            新規投稿
+          <% elsif formFlg == "edit" %>
+            記事編集
+          <% end %>          
+        </h5>
+        <div class="card-text">
+          <div class="mb-1">
+            <%= f.label  :タイトル,   class: "text-muted" %>
+            <%= f.text_field :title, class: "form-control" %>
+          </div>
+          <div class="mb-1">
+            <%= f.label  :本文,     class: "text-muted" %>
+            <%= f.text_area :text, class: "form-control", rows: 3 %>
+          </div>
+        </div>
+      </div>
+      <div class="card-footer">
+        <button type="button" class="btn bg-mainColor rounded-circle p-0 btn-round" data-toggle="modal" data-target="#infoWindow">
+          <% if formFlg == "new" %>
+            <%= fa_icon("plus") %>
+          <% elsif formFlg == "edit" %>
+            <%= fa_icon("check") %>
+          <% end %>
+        </button>
+        <%= render partial: "./layouts/infoWindow", locals: { article: @article, infoMessage: formFlg } %>
+      </div>
+    </div>
+  </div>
+<% end %>
