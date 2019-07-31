@@ -11,7 +11,7 @@
         <div class="card-text">
           <div class="field mb-1">
             <%= f.label :email %><br />
-            <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+            <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "form-control" %>
           </div>
 
           <div class="field mb-1">
@@ -19,12 +19,12 @@
             <% if @minimum_password_length %>
             <em class="text-muted">(<%= @minimum_password_length %>文字以上必須)</em>
             <% end %><br />
-            <%= f.password_field :password, autocomplete: "new-password" %>
+            <%= f.password_field :password, autocomplete: "new-password", class: "form-control" %>
           </div>
 
           <div class="field mb-1">
             <%= f.label :password_confirmation %><br />
-            <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
+            <%= f.password_field :password_confirmation, autocomplete: "new-password", class: "form-control" %>
           </div>
         </div>
       </div>
