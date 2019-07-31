@@ -4,7 +4,8 @@
     <p class="card-text"><%= article.text %></p>
     <h6 class="card-subtitle mb-2 text-muted text-right small"><%= article.created_at.strftime("%F %T(%a)") %></h6>
   </div>
-  <% if user_signed_in? %>
+
+  <% if user_signed_in? && article.user_id == current_user.id %> 
     <div class="card-footer">
       <%= link_to "/articles/#{article.id}/edit", style: "text-decoration: none;", method: :get do %>
         <button type="button" class="btn bg-mainColor rounded-circle p-0 btn-round">
