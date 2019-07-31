@@ -60,3 +60,6 @@ gem 'font-awesome-rails'
 
 # デバッグ用
 gem 'pry-rails'
+
+# ユーザー機能
+gem 'devise'
