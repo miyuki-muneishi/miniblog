@@ -1,24 +1,50 @@
-# README
+# 機能
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+- ユーザーがブログを投稿できる。
+- ユーザーが自分のブログを編集できる。
+- ユーザーが自分のブログを削除できる。
+- ログインしていなくても、全てのブログを閲覧できる。
 
-Things you may want to cover:
+# DB 設計
 
-* Ruby version
+## users table
 
-* System dependencies
+|  Column  |  Type  |          Options          |
+| :------: | :----: | :-----------------------: |
+|   name   | string | null: false, unique: true |
+|  email   | string | null: false, unique: true |
+| password | string |        null: false        |
 
-* Configuration
+### Association
 
-* Database creation
+- has_many :articles
 
-* Database initialization
+## articles table
 
-* How to run the test suite
+| Column  |  Type   |      Options      |
+| :-----: | :-----: | :---------------: |
+|  text   |  text   |                   |
+|  title  | string  |                   |
+| user_id | integer | foreign_key: true |
 
-* Services (job queues, cache servers, search engines, etc.)
+### Association
 
-* Deployment instructions
+- belongs_to :user
 
-* ...
+# 使用 Gem
+
+- bootstrap
+  - css フレームワーク
+- font-awesome-rails
+  - アイコン
+- pry-rails
+  - デバッグツール
+- devise
+  - ユーザー機能補助
+- devise-i18n
+- devise-i18n-views
+  - devise の日本語化
+- kaminari
+  - ページネーション
+- kaminari-bootstrap
+  - ページネーションで bootstrap の使用補助
