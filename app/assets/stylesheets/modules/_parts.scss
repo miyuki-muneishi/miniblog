@@ -1,0 +1,19 @@
+.bg-mainColor {
+  background: #5cd5e3;
+  color: #fff;
+}
+
+.btn-round {
+  width: 2rem;
+  height: 2rem;
+  display: inline-block;
+  transition: 0.3s;
+  -webkit-transform: scale(1);
+  transform: scale(1);
+}
+
+.btn-round:hover {
+  color: #fff;
+  -webkit-transform: scale(1.2); // 要素を拡大または縮小
+  transform: scale(1.2);
+}
