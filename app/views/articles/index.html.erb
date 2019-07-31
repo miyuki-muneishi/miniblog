@@ -2,3 +2,4 @@
   <%= render partial: "article",              locals: { article: article } %>
   <%= render partial: "./layouts/infoWindow", locals: { article: article, infoMessage: "delete" } %>
 <% end %>
+<%= paginate(@articles) %>
