@@ -10,21 +10,22 @@
         <%= link_to "ホーム", root_path, class: "nav-link" %>
       </li>
 
+      <% if user_signed_in? %>
       <li class="nav-item">
         <%= link_to "投稿", new_article_path, class: "nav-link" %>
       </li>
+        <li class="nav-item">
+         <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "nav-link" %>
+       </li>
 
-      <li class="nav-item">
-        <a class="nav-link" href="#">ログアウト</a>
-      </li>
-
-      <li class="nav-item">
-        <a class="nav-link" href="#">新規登録</a>
-      </li>
-
-      <li class="nav-item">
-        <a class="nav-link" href="#">ログイン</a>
-      </li>
+      <% else %>
+        <li class="nav-item">
+          <%= link_to "新規登録", new_user_registration_path, class: "nav-link" %>
+        </li>
+        <li class="nav-item">
+          <%= link_to "ログイン", user_session_path, class: "nav-link" %>
+        </li>
+      <% end %>
     </ul>
   </div>
 </nav>
