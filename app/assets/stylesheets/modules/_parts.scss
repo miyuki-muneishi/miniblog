@@ -17,3 +17,23 @@
   -webkit-transform: scale(1.2); // 要素を拡大または縮小
   transform: scale(1.2);
 }
+
+/* ページネーション */
+.pagination > li > a {
+  border: none;
+  color: #666666;
+  border-radius: 3px;
+}
+
+/* ページネーション 今見ているページ */
+.page-item.active .page-link {
+  background: #5cd5e3;
+  transition-duration: 0.3s;
+}
+
+.page-item.active .page-link:hover {
+  background: #5cd5e3;
+  color: #fff;
+  opacity: 0.6;
+  transition-duration: 0.3s;
+}
