@@ -8,14 +8,14 @@
   <% if user_signed_in? && article.user_id == current_user.id %> 
     <div class="card-footer">
       <%= link_to "/articles/#{article.id}/edit", style: "text-decoration: none;", method: :get do %>
-        <button type="button" class="btn bg-mainColor rounded-circle p-0 btn-round">
+        <%= button_tag class: "btn bg-mainColor rounded-circle p-0 btn-round" do %>
           <%= fa_icon("edit") %>
-        </button>
+        <% end %>
       <% end %>
 
-      <button type="button" class="btn bg-mainColor rounded-circle p-0 btn-round" data-toggle="modal" data-target="#infoWindow">
+      <%= button_tag class: "btn bg-mainColor rounded-circle p-0 btn-round", "data-toggle": "modal", "data-target": "#infoWindow" do %>
         <%= fa_icon("trash") %>
-      </button>
+      <% end %>
     </div>
   <% end %>
 </div>
