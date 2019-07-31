@@ -1,4 +1,6 @@
 class ArticlesController < ApplicationController
+  before_action :move_to_index, except: :index
+
   def index
     @articles = Article.order("created_at DESC")
   end
@@ -32,5 +34,10 @@ class ArticlesController < ApplicationController
   private
   def article_params
     params.require(:article).permit( :title, :text )
+  end
+
+  # ログインしていなかったらindexに飛ばす
+  def move_to_index
+    redirect_to action: :index unless user_signed_in?
   end
 end
