@@ -15,9 +15,10 @@
         </div>
       </div>
       <div class="card-footer">
-        <%= button_tag type: "submit", class: "btn btn-info rounded-circle p-0", style: "width:2rem;height:2rem;" do %>
-          <%= fa_icon("plus") %>
-        <% end %>
+        <button type="button" class="btn bg-mainColor rounded-circle p-0 btn-round" data-toggle="modal" data-target="#infoWindow">
+           <%= fa_icon("plus") %>
+        </button>
+        <%= render partial: "./layouts/infoWindow", locals: { article: @article, infoMessage: "new" } %>
       </div>
     </div>
   </div>
